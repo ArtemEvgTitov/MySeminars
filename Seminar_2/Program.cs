@@ -1,5 +1,6 @@
 ﻿// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
 Console.WriteLine("Первая задача");
+
 void ShowBiggerDigit()
 {
     int rand = new Random().Next(10, 100);
@@ -18,6 +19,7 @@ Console.WriteLine();
 
 // Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
 Console.WriteLine("Вторая задача");
+
 int DelSecondNum()
 {
     int ran1 = new Random().Next(100, 1000);
@@ -35,8 +37,10 @@ Console.WriteLine();
 
 // Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если второе число не кратно числу первому, то программа выводит остаток от деления.
 Console.WriteLine("Третья задача");
+
 // Первый вариант
 Console.WriteLine("Первый вариант");
+
 Console.Write("Введите первое число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
@@ -53,6 +57,7 @@ Console.WriteLine();
 
 // Второй вариант
 Console.WriteLine("Второй вариант");
+
 int RemainNum(int b1, int b2)
 {
     if (b2 % b1 == 0)
@@ -76,7 +81,26 @@ Console.WriteLine();
 
 // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
 Console.WriteLine("Четвёртая задача");
+
+// Первый вариант
+Console.WriteLine("Первый вариант");
+
 Console.Write("Введите число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 if (num3 % 7 == 0 && num3 % 23 == 0) Console.WriteLine("Введённое число кратно одновременно 7 и 23");
 else Console.WriteLine("Введённое число не кратно одновременно 7 и 23");
+Console.WriteLine();
+
+// Второй вариант
+Console.WriteLine("Второй вариант");
+
+bool DivisibleBothNum (int r)
+{
+    if (r % 7 == 0 && r % 23 == 0) return true;
+    else return false;
+}
+Console.Write("Введите число: ");
+int r = Convert.ToInt32(Console.ReadLine());
+
+bool res3 = DivisibleBothNum(r);
+Console.WriteLine(res3);
