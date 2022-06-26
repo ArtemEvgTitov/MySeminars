@@ -1,4 +1,5 @@
 ﻿// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+Console.WriteLine("Первая задача");
 void ShowBiggerDigit()
 {
     int rand = new Random().Next(10, 100);
@@ -16,6 +17,7 @@ ShowBiggerDigit();
 Console.WriteLine();
 
 // Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
+Console.WriteLine("Вторая задача");
 int DelSecondNum()
 {
     int ran1 = new Random().Next(100, 1000);
@@ -32,21 +34,48 @@ Console.WriteLine("Итоговое число " + res1);
 Console.WriteLine();
 
 // Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если второе число не кратно числу первому, то программа выводит остаток от деления.
+Console.WriteLine("Третья задача");
+// Первый вариант
+Console.WriteLine("Первый вариант");
 Console.Write("Введите первое число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 int remain;
 
-if (num1 % num2 == 0) Console.WriteLine("Второе число кратно первому");
+if (num2 % num1 == 0) Console.WriteLine("Второе число кратно первому");
 else
 {
-    remain = num1 % num2;
+    remain = num2 % num1;
     Console.WriteLine("Остаток от деления равен " + remain);
 }
 Console.WriteLine();
 
+// Второй вариант
+Console.WriteLine("Второй вариант");
+int RemainNum(int b1, int b2)
+{
+    if (b2 % b1 == 0)
+    {
+        Console.WriteLine($"{b2} кратно {b1}");
+        return 0;
+    }
+    else
+    {
+        int remain1 = b2 % b1;
+        return remain1;
+    }
+}
+Console.Write("Введите первое число: ");
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int b2 = Convert.ToInt32(Console.ReadLine());
+int res2 = RemainNum(b1, b2);
+if (res2 != 0) Console.WriteLine($"{b2} и {b1} не делятся! Остаток = {res2}");
+Console.WriteLine();
+
 // Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23.
+Console.WriteLine("Четвёртая задача");
 Console.Write("Введите число: ");
 int num3 = Convert.ToInt32(Console.ReadLine());
 if (num3 % 7 == 0 && num3 % 23 == 0) Console.WriteLine("Введённое число кратно одновременно 7 и 23");
