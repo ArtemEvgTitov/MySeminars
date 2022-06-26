@@ -16,7 +16,7 @@ ShowBiggerDigit();
 Console.WriteLine();
 
 // Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
-void DelSecondNum()
+int DelSecondNum()
 {
     int ran1 = new Random().Next(100, 1000);
     Console.WriteLine("Исходное число " + ran1);
@@ -25,9 +25,10 @@ void DelSecondNum()
     int last = ran1 % 10;
     int result = first * 10 + last;
 
-    Console.WriteLine("Итоговое число " + result);
+    return result;
 }
-DelSecondNum();
+int res1 = DelSecondNum();
+Console.WriteLine("Итоговое число " + res1);
 Console.WriteLine();
 
 // Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. Если второе число не кратно числу первому, то программа выводит остаток от деления.
