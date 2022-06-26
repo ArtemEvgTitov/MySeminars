@@ -20,7 +20,6 @@ if (num < 100)
 }
 int result = SecondNum(num);
 Console.WriteLine($"Вторая цифра введённого числа равна {result}");
-Console.WriteLine();
 
 // Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
@@ -36,13 +35,12 @@ if (num1 < 100)
     Console.WriteLine($"У числа {num1} нет третьей цифры");
     return;
 }
-while (num1>999)
+while (num1 > 999)
 {
-    num1 = num1/10;
+    num1 = num1 / 10;
 }
 int result1 = ThirdNum(num1);
 Console.WriteLine($"Третья цифра равна {result1}");
-Console.WriteLine();
 
 // Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
