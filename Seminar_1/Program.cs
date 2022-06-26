@@ -23,11 +23,11 @@ Console.WriteLine($"This is {weekday}");
 
 // Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
 
-int number;
+int number1;
 int numLast; 
 
 Console.Write("Введите трёхзначное число: ");
-number = Convert.ToInt32(Console.ReadLine());
+number1 = Convert.ToInt32(Console.ReadLine());
 
-numLast = number % 10;
+numLast = number1 % 10;
 Console.WriteLine($"Последняя цифра {numLast}");
