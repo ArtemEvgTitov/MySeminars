@@ -45,8 +45,8 @@ void Grade(int n)
 }
 
 Console.Write("Введите число ");
-int n = Convert.ToInt32(Console.ReadLine());
-Grade(n);
+int n1 = Convert.ToInt32(Console.ReadLine());
+Grade(n1);
 
 // Найти длину гиппотенузы в трёхмерном пространстве
 
