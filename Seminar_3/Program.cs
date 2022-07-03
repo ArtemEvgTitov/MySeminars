@@ -61,3 +61,17 @@ double GetDistance(double x1, double y1, double z1, double x2, double y2, double
 
     return result;
 }
+double z1 = 0;
+double z2 = 0;
+
+Console.Write("Введите коордитату x для первой точки ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите коордитату y для первой точки ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите коордитату x для второй точки ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите коордитату y для второй точки ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+double result1 = GetDistance(x1, y1, z1, x2, y2, z2);
+Console.WriteLine("Расстояние между точками равно " + result1);
