@@ -15,39 +15,39 @@
 
 // Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-// string CovvertNumber(int num)
-// {
-//     string ConNum = string.Empty;
-//     while (num > 0)
-//     {
-//         ConNum = num % 2 + ConNum;
-//         num = num / 2;
-//     }
-//     return ConNum;
-// }
-// Console.WriteLine(CovvertNumber(10));
+string CovvertNumber(int num)
+{
+    string ConNum = string.Empty;
+    while (num > 0)
+    {
+        ConNum = num % 2 + ConNum;
+        num = num / 2;
+    }
+    return ConNum;
+}
+Console.WriteLine(CovvertNumber(10));
 
 // Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
 
-// int[] Fibonacci(int N)
-// {
-//     int[] array = new int[N];
-//     array[0] = 0;
-//     array[1] = 1;
-//     for (int i = 2; i < N; i++)
-//     {
-//         array[i] = array[i-1] + array[i-2];
-//     }
-//     return array;
-// }
-// void ShowArray(int[] array)
-// {
-//     for (int i = 0; i < array.Length; i++)
-//         Console.Write(array[i] + " ");
+int[] Fibonacci(int N)
+{
+    int[] array = new int[N];
+    array[0] = 0;
+    array[1] = 1;
+    for (int i = 2; i < N; i++)
+    {
+        array[i] = array[i-1] + array[i-2];
+    }
+    return array;
+}
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
 
-//     Console.WriteLine();
-// }
-// ShowArray(Fibonacci(10));
+    Console.WriteLine();
+}
+ShowArray(Fibonacci(10));
 
 // Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины. // A < B + C
 
