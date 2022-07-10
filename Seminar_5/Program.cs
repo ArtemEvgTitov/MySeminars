@@ -79,8 +79,7 @@ int[] ReversArray(int[] array)
 }
 int[] myArray0 = CreateRandomArray0(12, -9, 9);
 ShowArray0(myArray0);
-ReversArray(myArray0);
-ShowArray0(myArray0);
+ShowArray0(ReversArray(myArray0));
 
 
 // Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
