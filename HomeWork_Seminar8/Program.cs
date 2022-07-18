@@ -1,4 +1,6 @@
-﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+﻿// Задача 54: Задайте двумерный массив. 
+// Напишите программу, которая упорядочит по убыванию элементы каждой строки 
+// двумерного массива.
 
 // int[,] CreateRandom2dArray(int rows, int columns)
 // {
@@ -51,7 +53,8 @@
 // Console.WriteLine("Отсортированный массив: ");
 // Show2dArray(SortingArray(myArray));
 
-// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+// Задача 56: Задайте прямоугольный двумерный массив. 
+// Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
 // int[,] CreateRandom2dArray(int rows, int columns)
 // {
@@ -117,10 +120,10 @@
 // Console.WriteLine("Заданный массив: ");
 // Show2dArray(myArray);
 // ShowSum(sumString(myArray));
-// Console.WriteLine($"В заданном массиве наименьшая сумма в строке {minSum(sumString(myArray))}");
+// Console.WriteLine($"Наименьшая сумма в строке {minSum(sumString(myArray))}");
 
-
-// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Задача 58: Задайте две матрицы. 
+// Напишите программу, которая будет находить произведение двух матриц.
 
 // int[,] CreateRandom2dArray(int rows, int columns)
 // {
@@ -148,12 +151,15 @@
 // void UltraMatrix(int[,] array1, int[,] array2)
 // {
 //     for (int i = 0; i < array1.GetLength(0); i++)
+//     {
 //         for (int j = 0; j < array1.GetLength(1); j++)
 //         {
 //             array1[i, j] *= array2[i, j];
 //             Console.Write(array1[i, j] + " ");
 //         }
 //         Console.WriteLine();
+//     }
+//     Console.WriteLine();
 // }
 
 // Console.Write("Необходимо определить размер обеих матриц. Введите количество строк: ");
@@ -168,7 +174,9 @@
 
 // UltraMatrix(myArray1, myArray2);
 
-// Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Задача 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, 
+// добавляя индексы каждого элемента.
 
 // int[,,] CreateRandom3dArray(int m, int n, int l)
 // {
@@ -185,9 +193,11 @@
 //             for (int j = 0; j < i; j++)
 //             {
 //                 while (tempArray[i]==tempArray[j])
+//                 {
 //                     tempArray[i] = new Random().Next(10, 100);
 //                     j = 0;
 //                     number = tempArray[i];
+//                 }
 //                 number = tempArray[i];
 //             }
 //         }
@@ -198,8 +208,10 @@
 //         for (int y = 0; y < newArray.GetLength(1); y++)
 //         {
 //             for (int z = 0; z < newArray.GetLength(2); z++)
+//             {
 //                 newArray[x,y,z] = tempArray[count];
 //                 count++;
+//             }
 //         }
 //     }
 
@@ -231,34 +243,34 @@
 
 // Задача 62. Заполните спирально массив 4 на 4.
 
-// void Show2dArray(int[,] array)
-// {
-//     for (int i = 0; i < array.GetLength(0); i++)
-//         for (int j = 0; j < array.GetLength(1); j++)
-//             Console.Write(array[i, j] + " ");
-//         Console.WriteLine();
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
 
-//     Console.WriteLine();
-// }
+    Console.WriteLine();
+}
 
-// int[,] spiralFilling(int[,] array)
-// {
-//     int count = 1;
-//     int i = 0;
-//     int j = 0;
+int[,] spiralFilling(int[,] array)
+{
+    int count = 1;
+    int i = 0;
+    int j = 0;
 
-//     while (count <= array.GetLength(0) * array.GetLength(1))
-//         array[i, j] = count;
-//         count++;
-//         if (i <= j + 1 && i + j < array.GetLength(1) - 1) j++;
-//         else if (i < j && i + j >= array.GetLength(0) - 1) i++;
-//         else if (i >= j && i + j > array.GetLength(1) - 1) j--;
-//         else i--;
+    while (count <= array.GetLength(0) * array.GetLength(1))
+        array[i, j] = count;
+        count++;
+        if (i <= j + 1 && i + j < array.GetLength(1) - 1) j++;
+        else if (i < j && i + j >= array.GetLength(0) - 1) i++;
+        else if (i >= j && i + j > array.GetLength(1) - 1) j--;
+        else i--;
 
-//     return array;
-// }
+    return array;
+}
 
-// Console.WriteLine();
-// int[,] newArray = new int[4, 4];
-// Console.WriteLine("Заполненный массив: ");
-// Show2dArray(spiralFilling(newArray));
+Console.WriteLine();
+int[,] newArray = new int[4, 4];
+Console.WriteLine("Заполненный массив: ");
+Show2dArray(spiralFilling(newArray));
