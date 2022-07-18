@@ -149,8 +149,10 @@
 // {
 //     for (int i = 0; i < array1.GetLength(0); i++)
 //         for (int j = 0; j < array1.GetLength(1); j++)
+//         {
 //             array1[i, j] *= array2[i, j];
 //             Console.Write(array1[i, j] + " ");
+//         }
 //         Console.WriteLine();
 // }
 
@@ -183,11 +185,9 @@
 //             for (int j = 0; j < i; j++)
 //             {
 //                 while (tempArray[i]==tempArray[j])
-//                 {
 //                     tempArray[i] = new Random().Next(10, 100);
 //                     j = 0;
 //                     number = tempArray[i];
-//                 }
 //                 number = tempArray[i];
 //             }
 //         }
@@ -198,10 +198,8 @@
 //         for (int y = 0; y < newArray.GetLength(1); y++)
 //         {
 //             for (int z = 0; z < newArray.GetLength(2); z++)
-//             {
 //                 newArray[x,y,z] = tempArray[count];
 //                 count++;
-//             }
 //         }
 //     }
 
@@ -233,41 +231,34 @@
 
 // Задача 62. Заполните спирально массив 4 на 4.
 
-void Show2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-            Console.Write(array[i, j] + " ");
-        Console.WriteLine();
-    }
+// void Show2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
 
-    Console.WriteLine();
-}
+//     Console.WriteLine();
+// }
 
-int[,] spiralFilling(int[,] array)
-{
-    int count = 1;
-    int i = 0;
-    int j = 0;
+// int[,] spiralFilling(int[,] array)
+// {
+//     int count = 1;
+//     int i = 0;
+//     int j = 0;
 
-    while (count <= array.GetLength(0) * array.GetLength(1))
-    {
-        array[i, j] = count;
-        count++;
-        if (i <= j + 1 && i + j < array.GetLength(1) - 1) j++;
-        else if (i < j && i + j >= array.GetLength(0) - 1) i++;
-        else if (i >= j && i + j > array.GetLength(1) - 1) j--;
-        else i--;
-    }
+//     while (count <= array.GetLength(0) * array.GetLength(1))
+//         array[i, j] = count;
+//         count++;
+//         if (i <= j + 1 && i + j < array.GetLength(1) - 1) j++;
+//         else if (i < j && i + j >= array.GetLength(0) - 1) i++;
+//         else if (i >= j && i + j > array.GetLength(1) - 1) j--;
+//         else i--;
 
-    return array;
-}
+//     return array;
+// }
 
-Console.WriteLine();
-
-int[,] newArray = new int[4, 4];
-Console.WriteLine("Заданный массив: ");
-Show2dArray(newArray);
-Console.WriteLine("Заполненный массив: ");
-Show2dArray(spiralFilling(newArray));
+// Console.WriteLine();
+// int[,] newArray = new int[4, 4];
+// Console.WriteLine("Заполненный массив: ");
+// Show2dArray(spiralFilling(newArray));
