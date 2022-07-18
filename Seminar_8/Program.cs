@@ -50,53 +50,53 @@
 
 // Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. В случае, если это невозможно, программа должна вывести сообщение для пользователя.
 
-int[,] CreateRandom2dArray(int rows, int columns)
-{
-    int[,] newArray = new int[rows, columns];
+// int[,] CreateRandom2dArray(int rows, int columns)
+// {
+//     int[,] newArray = new int[rows, columns];
 
-    for (int i = 0; i < newArray.GetLength(0); i++)
-        for (int j = 0; j < newArray.GetLength(1); j++)
-            newArray[i, j] = new Random().Next(0, 10);
+//     for (int i = 0; i < newArray.GetLength(0); i++)
+//         for (int j = 0; j < newArray.GetLength(1); j++)
+//             newArray[i, j] = new Random().Next(0, 10);
 
-    return newArray;
-}
+//     return newArray;
+// }
 
-void Show2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-            Console.Write(array[i, j] + " ");
-        Console.WriteLine();
-    }
+// void Show2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+//         Console.WriteLine();
+//     }
 
-    Console.WriteLine();
-}
+//     Console.WriteLine();
+// }
 
-int[,] Transporate2dArray(int[,] array)
-{
-    if (array.GetLength(0) != array.GetLength(1))
-        Console.WriteLine("Массив задан неверно");
-    return array;
-    for (int i = 0; i < array.GetLength(0); i++)
-        for (int j = i + 1; j < array.GetLength(1); j++)
-        {
-            int temp = array[i, j];
-            array[i, j] = array[j, i];
-            array[j, i] = temp;
-        }
+// int[,] Transporate2dArray(int[,] array)
+// {
+//     if (array.GetLength(0) != array.GetLength(1))
+//         Console.WriteLine("Массив задан неверно");
+//     return array;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         for (int j = i + 1; j < array.GetLength(1); j++)
+//         {
+//             int temp = array[i, j];
+//             array[i, j] = array[j, i];
+//             array[j, i] = temp;
+//         }
 
-    return array;
-}
+//     return array;
+// }
 
-Console.Write("Необходимо определить размер массива. Введите количество строк: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("А теперь введите количество столбцов: ");
-int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Необходимо определить размер массива. Введите количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("А теперь введите количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] myArray = CreateRandom2dArray(m, n);
-Show2dArray(myArray);
-Show2dArray(Transporate2dArray(myArray));
+// int[,] myArray = CreateRandom2dArray(m, n);
+// Show2dArray(myArray);
+// Show2dArray(Transporate2dArray(myArray));
 
 // Из двумерного массива целых чисел удалить строку и столбец, на пересечении которых расположен наименьший элемент.
 
