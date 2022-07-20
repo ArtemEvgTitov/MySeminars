@@ -39,11 +39,11 @@ Console.WriteLine();
 
 int numDegree(int a, int b)
 {
-    if (b > 1) 
+    if (b > 0) 
     {
         return a * numDegree(a, b - 1);
     }
-    return a;
+    return 1;
 }
 
 Console.WriteLine(numDegree(2, 3));
