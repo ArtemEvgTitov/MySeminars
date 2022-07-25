@@ -20,11 +20,31 @@ Console.WriteLine($"Общее количество слов в массиве, 
 
 string[] CombiningWords(string[] array)
 {
-    string[] combiningWords = new string[array.Length / 2];
+    string[] combiningWords = new string[array.Length];
 
-    for (int i = 0, j = 0; i < array.Length; i += 2, j++)
-        combiningWords[j] = array[i] + array[i + 1];
+    if (array.Length % 2 == 0)
+    {
+        combiningWords = new string[array.Length / 2];
 
+        for (int i = 0, j = 0; i < array.Length; i += 2, j++)
+            combiningWords[j] = array[i] + array[i + 1];
+
+        return combiningWords;
+    }
+    if (array.Length % 2 != 0)
+    {
+        combiningWords = new string[array.Length / 2 + 1];
+        combiningWords[combiningWords.Length - 1] = array[array.Length-1];
+
+        for (int i = 0, j = 0; i < array.Length; i += 2, j++)
+        {
+            if(i == array.Length-1) continue;
+            combiningWords[j] = array[i] + array[i + 1];
+        }
+
+        return combiningWords;
+    }
+    
     return combiningWords;
 }
 
@@ -36,7 +56,7 @@ void ShowArray(string[] array)
     Console.WriteLine();
 }
 
-string[] moreWords = { "qwe", "wer", "Ert", "aty", "tyu", "yui" };
+string[] moreWords = { "qwe", "wer", "Ert", "aty", "tyu", "yui", "yui" };
 
 string[] combiningWords = CombiningWords(moreWords);
 ShowArray(combiningWords);
